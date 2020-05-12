@@ -1,0 +1,303 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;  /* כל האלמנטים של האתר צריכים להיות לפי מודל הקופסה*/
+}
+
+html {
+
+    box-sizing: border-box;  /* מודל הקופסה*/
+    direction: rtl;  /*  אתר בעברית*/
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;   /*  רוחב הדפדפן */
+    min-height: 100vh; /*  גובה מינימלי  */
+    margin: 0;      /*  ללא גבולות מסביב  */
+    background-color: #ececec; /*  צבע רקע אם לא הוגדר אחרת  */
+    font-size: 18px;  /*  גודל הכתב אם לא הוגדר  */
+    color: #2f3640; /*  צבע הפונט אם לא הוגדר  */
+    overflow-x: hidden;
+    font-family: 'Varela Round', sans-serif; /*  סוג הפונט שמשכנו מאתר אינרטרנט ואם לא אז אחרי הפסיק זה הפונט שיהיה מוגדר  */
+    scroll-behavior: smooth;
+}
+/*חייב להיות מתחת לתגית בודי body*/
+@media screen and (max-width: 950px) { /*חוקי css על בסיס רוחב מסך משתנה*/
+    /*האתר ישתנה מתחת ל950 פיקסלים אם נצמצם את המסך*/
+    /*body{
+        color: red;   הכתב יהפוך להיות אדום
+
+    }*/
+}
+
+#progress{ /*בחירת איי דיי בעזרת סולמית ולא נקודה*/
+    height: 5px;
+    width: 0;
+    position: fixed; /*מיקום קבוע בתוך החלון*/
+    top: 0; /*תמיד בלמעלה של החלון*/
+    background-color: #e43e3e;
+    z-index: 99999; /*גורם לאובייקט להיות למעלה תמיד הכוונה מעל כל שאר האובייקטים*/
+}
+
+.content { /*   עיצוב מחלקה content */
+ width: 80%;
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 20px;
+}
+
+@media screen and (max-width: 930px){ /*למכישרים שקטנים מ930 פיקסלים*/
+    .content{
+        width: 95%; /*95 אחוז מרוחב המכשיר*/
+    }
+}
+
+@media screen and (max-width: 560px){ /*למכישרים שקטנים 560 פיקסלים*/
+    .content{
+        width: 100%; /*אם נוריד את המסך מתחת ל600 פיקסלים אז לא יהיה רווח בצדדים והכתב יהיה פרוס על 100 אחוז מהמסך*/
+        padding: 0 20px; /* אין מרווח מלמעלה למטה ויש 20 פיקסלים מהצדדים*/
+    }
+}
+
+header { /*  עיצוב החלק העליון של הדף */
+ width: 100%;
+ height: 400px;
+ background: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('images/header-background.jpg'); /*   פונקציה שמכניסה רקע */
+ background-size: cover; /*   הגדרה לגודל הרקע */
+}
+
+a { /*   מחלקת הלינקים איך העיצוב שלהם יראה */
+    cursor: pointer; /*   אם נעמוד עם העכבר על הלינק אז העכבר יתחלף לפוינטר */
+    text-decoration: none; /*  אם נלחץ על הלינק אז לא יהיה קו למטה*/
+}  
+
+.nav-bar { /* עיצוב המחלקה של התפריט למעלה */
+    display: flex; /*  סדר את האלמנטים ביחד בשורה ולא בטור */
+    justify-content: space-between; /*   סדר את האלמנטים במחלקה עם רווח בינהם */
+}
+.main-logo{ /*  עיצוב הלוגו */
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
+}
+
+.nav-bar li{ /*   פנייה לאובייקט בתוך מחלקה */
+     display: inline-block;  /* כל האובייקטים מסוג זה יהיו בקו אחד, אחד ליד השני */
+     margin: 0 20px;  /*    לכל אובייקט יהיה רווח אפס מלמעלה ועשרים פיקסלים מהצדדים, מה שיגרום לרווח של כל אובייקט מהאובייקט הבא*/
+     list-style: none;  /*   ללא עיצוב שיפריע לרשימה שלנו */
+     font-weight: bold;  /*  הפונט יהיה בולט */
+     cursor: default; /*   כשעומדים עם העכבר הוא נשאר רגיל ולא מתחלף */
+}
+
+ul li a{ /*צביעה של התפריט למעלה בצבע שחור*/
+    color: #2f3640;
+}
+ul li a:hover{  /*   עיצוב ברגע שעומדים על האובייקט */ 
+    color: #e9e4e3;
+
+}
+
+.hero{  /*  קריאה למחלקה של הכותרת ״נעליים בדרך שלך״ */
+    font-size: 65px;  /*   קביעת גודל פונט */
+    margin-bottom: 10px;  /*    רווח מלמטה של עשרה פיקסלים */
+}
+
+button{  /*   פנייה לאובייקט כפתור לפי מה שהגדרנו */
+    padding: 5px 10px;  /*   מרחק מהכתב למסגרת של הכפתור חמישה פיקסלים מלמעלה למטה ועשרה פיקסלים מהצדדים */
+    border: none;  /*    ללא גבול  */
+    margin: 0 5px;  /*  מרחק חיצוני מחוץ למסגרת הכפתור של חמישה פיקסלים מהצדדים  */
+    border-radius: 6px;  /*   עיגול הקצוות */
+    font-size: 18px;/*   גודל הפונט  */
+    background-color: cornflowerblue;  /*   צבע רקע  */
+    font-family:'Varela Round', sans-serif; /*  סוג הפונט שמשכנו מאתר אינרטרנט ואם לא אז אחרי הפסיק זה הפונט שיהיה מוגדר  */ 
+    outline: none; /*   אם לוחצים על הכפתור אז אין מסגרת לכפתור בצבע מסוים  */
+    color: white; /*   צבע כתב לבן  */
+    cursor: pointer; /*   ברגע שעומדים עם העכבר על הכפתור העכבר מתחלף לסוג פוינטר  */
+}
+
+@media screen and (max-width: 630px){ /*חוקי רספונסיביות*/
+    header{
+        text-align: center;
+        height: 420px;
+    }
+    .nav-bar{
+        flex-direction: column;/*מיקום הלוגו והתפריט אחד מתחת לשני*/
+        align-items: center;/*כל האלמנטים לאמצע*/
+        padding-top: 20px; /*רווח מלמעלה של 20 םיקסלים*/
+    }
+    .nav-bar .main-logo{ /* קטנה של הלוגו*/
+        width: 70px;
+        height: 70px;
+    }
+    .nav-bar ul{
+        padding: 0;
+    }
+
+    .nav-bar li{
+        display: block; /*סידור התפריט בטור ולא בשורה*/
+        margin-bottom: 10px; /*רווח מתחת לכל פריט ברשימה של 10 פיקסלים*/
+    }
+    .hero {
+        font-size: 42px; /*הקטנת הפונט של הכותרת*/
+        margin: 0 auto 20px; /*מרווח מלמעלה 0 מהצדדים אוטומטי ומלמטה 20*/
+    }
+}
+
+.branch-container{
+    display: flex; /*  לסדר את כל הכרטיסים בשורה אחת  */
+    justify-content: space-between; /*  רווח שווה בין כל הכרטיסים */
+    margin-bottom: 20px; /* רווח תחתון של 20 פיקלסים  */
+}
+
+.branch-card{ /* עיצוב לכרטיסים גובה רוחב וצבע רקע  */
+    width: 220px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0px 14px 28px rgba(0,0,0,0.25); /*  צל לכל כרטיס בגדלים שהגדרנו מכל כיוון וצבע */
+    border-radius: 6px; /*  עיגול הקצוות */
+}
+
+.card-style{ /* עיצוב הכתב בכרטיסי מיקום הסניפים*/
+    text-align: center;  /* מיקום הכתב באמצע*/
+    padding: 5px;
+    border-top: 1px solid #e4e4e4;
+    padding-top: 20px;
+    font-size: 16px;
+
+}
+
+.card-style h3{ /*גישה לכותרת בכל הכרטיס*/
+    margin: 0;
+    line-height: 1;
+}
+
+@media screen and (max-width: 780px){
+    .branch-container{
+        flex-direction: column; /*סידור הכרטיסים של המפות אחד אחרי השני ברגע שמצמצמים את האתר*/
+    }
+    .branch-card{
+        display: flex;
+        height: 150px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-style{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: none;
+        width: 100%;
+    }
+}
+
+.video iframe{
+    box-shadow: 0px 14px 28px rgba(0,0,0,0.25); /*נותנים צל לאיי פריים בתוך הדיב וידאו*/
+}
+
+@media screen and (max-width: 640px){ /*צמצום הוידאו לפי הגודל של המסך*/
+    .video iframe{
+    width: 450px; 
+    height: 200px;
+    }
+}
+@media screen and (max-width: 595px){
+    .video iframe{
+    width: 320px; 
+    height: 200px;
+    }
+}
+
+.feature-box{
+    position: relative;  /*נוכל להשתמש בהגדרה זאת על מנת להחביא בהמשך איזשהו אובייקט מתחת*/
+    width: calc(100vw/3); /*הרוחב שיהיה לתמונה הוא רוחב המסך 100 חלקי 3 בעזרת פונקציה חילוק */
+    height: calc(100vw/3);
+    overflow: hidden; /*כל האלמנטים לא יברחו מהאיזור*/
+    float: right; /*כל האלמנטים יצמדו לצד ימין*/
+}
+
+.feature-box img { /*קריאה לתמונה בתוך הדיב פיצר בוקס*/
+    width: 100%; /*100 אחוז מרוחב התמונה*/
+    height: 100%;
+    object-fit: cover; /*מדביק את התמונה באופן טבעי על הסקשן*/
+    transition: 0.5s; /*הגדרה זאת אומרת שכל האנימציות שעל התמונה שלנו יארכו למשך חצי שנייה!!!!! */
+}
+
+.feature-box:hover img{ /*מה יקרה לתמונה כאשר נעבור עם העבר עליה*/
+    opacity: 0.2; /* הבהירות של התמונה תרד כמעט ל0*/
+    transform: scale(1.3);/*כשנעמוד על התמונה אז יהיה זום אין לפי 1.3 מהתמונה המקורית*/
+}
+
+.feature-description{
+    opacity: 0;  /* הבהירות של הטקסט p*/
+    position: absolute; /*מחביאים את האלמנט הזה מתחת אלמנט אחר עם האופציה פוזישן רלטיב*/
+    top: 50%;
+    right: 50%; /*מיקום הטקסט 50 אחוז מלמעלה ו50 אחוז מימין על התמונה*/
+    /*כרגע הטקסט נמצא על התמונה באמצע פשוט לא רואים אותו כי הקפסיטי שלו שווה ל0 כל זה בעזרת הפונקציה פוזישן אבסולוט שיושבת על רלטיב*/
+    transform: translate(50%, -70%); /*הזזה של הכתב לבדיוק אמצע התמונה בעזרת הפונקציה, כי הכתב לא ישב בדיוק באמצע*/
+    font-size: 18px;
+    font-weight: bold; /*כתב בולט מודגש*/
+    text-align: center; /*במיקום הטקסט במרכז*/
+}
+
+.feature-box:hover .feature-description { /*מה יקרה לטקסט שמתחבא בתמונה ברגע שנעמוד על התמונה!!!!!*/
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px){
+    .feature-description{
+        font-size: 16px;
+    }
+}
+
+.app-container{
+    display: flex; /*מיישר את כולם ביחד לקו אחד*/
+    justify-content: space-evenly; /*מחלק את הרוחב באופן שווה*/
+}
+
+.app-view, /*שני המחלקות האלה עם אותן הגדרות עיצוב*/
+.app-store-logos{
+    width: 200px;
+    object-fit: contain; /*הגודל של התמונה יהיה לפי הצד הגדול יותר שלה, כי הגדרנו רק רוחב למעלה ולא את שאר הגדלים*/
+}
+
+@media screen and (max-width: 500px){
+    .app-container{
+        flex-direction: column-reverse; /*מסדר את האובייקטים בסדר הפוך, קודם יופיע הציור של האפלקציה ואז קישורים לחנויות*/
+        align-items: center;
+    }
+    .app-store-logos{
+        margin-top: 20px; /*מרווח בין הסמלים של החנויות לחלק העליון של 20 פיקסל*/
+    }
+
+    .app-view{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: white;
+
+}
+
+footer ul{ /*עיצוב רשימת הלינקים*/
+    padding: 0; /*אין עיצוב או מסגרת מהצדדים*/
+    list-style: none; /*ביטול העיצוב של הרשימה לאורך*/
+    text-align: center;
+}
+
+footer li a, /*עיצוב הלינק עצמו*/
+footer li a:active, /* עיצוב הלינק עצמו אחרי שלוחצים עליו*/
+footer li a:visited { /* עיצוב לינק שכבר ביקרנו בהם שלא ישתנו לצבע אחר*/
+    color: white;
+}
+
+footer p{
+    color: #999;
+}
+

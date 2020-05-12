@@ -1,0 +1,161 @@
+<!--Command + option + S     for save All-->
+<!DOCTYPE html> <!--  הגדרה של אתר html -->
+<html>
+
+<head>
+    <!-- ראש הדף -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--אומר לאתר שהרוחב של האתר הולך לפי המכשיר-רספונסיבי-->
+    <link rel="stylesheet" href="style.css"> <!--  קישור לקובץ עיצוב css -->
+    <title>My first website</title> <!-- כותרת לדף -->
+</head>
+
+<body>
+    <!-- הגוף של הדף -->
+    <header>
+        <div id="progress"></div>
+        <!--יעבוד רק אם נבטל את אפקט האשלייה של הגלילה למטה אלמנט ריק לבנייה של גאווה סקריפט-->
+        <div class="content">
+            <!-- דיב אומר שזה חלק מהדף שנקרא לו בשם של מחלקה מסויימת ואז נוכל לגשת אליו בעיצוב לפי השם שלו -->
+            <div class="nav-bar">
+                <!-- התפריט שלנו בראש הדף -->
+                <img class="main-logo" src="images/logo-black.png" alt="my logo-black"> <!-- תמונה שהיא לוגו של האתר -->
+                <ul>
+                    <!-- רשימה שתשמש אותנו לבנות תפריט -->
+                    <li><a href="#us">עלינו</a></li>
+                    <!-- אחד הקריטריונים בתפריט יהיה עלינו עם קישור ברגע שנלחץ עליו  -->
+                    <li><a href="#places">סניפים</a></li>
+                    <li><a href="#app">האפליקציה שלנו</a></li>
+                </ul>
+            </div>
+            <h1 class="hero">נעליים בדרך שלך</h1> <!-- כותרת מסוג אייץ׳ 1  -->
+            <div>
+                <button>סניפים</button>
+                <!--כפתור סניפים-->
+                <button>האפליקציה שלנו</button>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <!-- החלק התחתון בדף מעוצב לפי המחלקה קונטנט בחלק העליון של הדף, במקום לכתוב עיצוב פעמיים-->
+        <div id="us"></div>
+        <!--כתובת לכפתור עלינו-->
+        <h2>קצת עלינו</h2>
+        <!--כותרת מסוג 2-->
+        <p>
+            <!--פסקה שנכתוב בה מלל-->
+            לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית להאמית קרהשק סכעיט דז מא, מנכם למטכין נשואי מנורךגולר
+            מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט. לורם איפסום דולור סיט אמט, קולורס מונפרד אדנדום
+            סילקוף, מרגשי ומרגשח. עמחליף קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם.
+            וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי
+            קלובר בריקנה סטום, לפריקך תצטריק לרטי.
+        </p>
+    </section>
+    <section class="content">
+        <!---עוד חלק תחתון בדף-->
+        <div id="places"></div>
+        <!--כתובת לכפתור סניפים-->
+        <h2>הסניפים שלנו</h2>
+        <div class="branch-container">
+            <!---פתיחת מחלקה חדשה של הסניפים שלנו בעזרת דיב-->
+            <div class="branch-card">
+                <!--פתיחת כרטיס לכל סניף, הכפלנו ל-3 כרטיסים, אחד לכל סניף-->
+                <!--כרטיס שמשכנו מהאתר באיטרנט שנקרא embed google map-->
+                <!--חשוב להגדיר את הגדלים באתר, של הכרטיסים שיצרנו בהגדרות כאן 220-150-->
+                <iframe width="220" height="150" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div class="card-style">
+                    <!--בשביל לעצב את הכתב בכל כרטיס נפתח דיב חדש ונקרא לו בשם מחלקה כדי לעצב אותו-->
+                    <h3>תל אביב</h3>
+                    <p>רויטמן 13</p>
+                    <b>03-999999</b>
+                    <!--טקסט בולט יותר-->
+                </div>
+            </div>
+            <div class="branch-card">
+                <iframe width="220" height="150" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=%D7%A8%D7%9E%D7%AA%20%D7%92%D7%9F&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div class="card-style">
+                    <!--בשביל לעצב את הכתב בכל כרטיס נפתח דיב חדש ונקרא לו בשם מחלקה כדי לעצב אותו-->
+                    <h3>רמת גן</h3>
+                    <p>חרות 18</p>
+                    <b>03-999999</b>
+                </div>
+            </div>
+            <div class="branch-card">
+                <iframe width="220" height="150" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=%D7%91%D7%99%D7%AA%20%D7%94%D7%A9%D7%99%D7%98%D7%94&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div class="card-style">
+                    <!--בשביל לעצב את הכתב בכל כרטיס נפתח דיב חדש ונקרא לו בשם מחלקה כדי לעצב אותו-->
+                    <h3>בית השיטה</h3>
+                    <p>הפרחים 93</p>
+                    <b>03-999999</b>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!--סקשן תמונות בכוונה אנחנו לא קראנו למחלקת עיצוב כיוון שאנחנו רוצים שזה יהיה לרוחב כל המסך-->
+        <div class="feature-box">
+            <p class="feature-description">טקסט על הטכנולוגיה של הנעליים שלנו</p>
+            <img src="images/tech-1.jpg" alt="הטכנולוגיה שלנו">
+        </div>
+        <div class="feature-box">
+            <p class="feature-description">טקסט על הטכנולוגיה של הנעליים שלנו</p>
+            <img src="images/tech-2.jpg" alt="הטכנולוגיה שלנו">
+        </div>
+        <div class="feature-box">
+            <p class="feature-description">טקסט על הטכנולוגיה של הנעליים שלנו</p>
+            <img src="images/tech-3.jpg" alt="הטכנולוגיה שלנו">
+        </div>
+        <div class="feature-box">
+            <p class="feature-description">טקסט על הטכנולוגיה של הנעליים שלנו</p>
+            <img src="images/tech-4.jpg" alt="הטכנולוגיה שלנו">
+        </div>
+        <div class="feature-box">
+            <p class="feature-description">טקסט על הטכנולוגיה של הנעליים שלנו</p>
+            <img src="images/tech-5.jpg" alt="הטכנולוגיה שלנו">
+        </div>
+        <div class="feature-box">
+            <p class="feature-description">טקסט על הטכנולוגיה של הנעליים שלנו</p>
+            <!--צריך לשים לב שהתמונה האחרונה מסוג שונה-->
+            <img src="images/tech-6.jpg" alt="הטכנולוגיה שלנו">
+        </div>
+    </section>
+    <section class="content app-container">
+        <!--שני שמות של מחלקה-->
+        <div id="app"></div>
+        <!--כתובת לכפתור האפליקציה שלנו-->
+        <img class="app-view" src="images/iphone-app.png" alt="iphone-app">
+        <img class="app-store-logos" src="images/app-store-logos.png" alt="app-store-logos">
+    </section>
+    <footer>
+        <!--תפריט תחתון-->
+        <ul>
+            <!--רשימה-->
+            <li>
+                <!--לינק-->
+                <a href="#">יצירת קשר</a>
+                <!--הפנייה לראש האתר-->
+            </li>
+            <li>
+                <!--לינק-->
+                <a href="#">ביקורות קונים</a>
+                <!--הפנייה לראש האתר-->
+            </li>
+            <li>
+                <!--לינק-->
+                <a href="#">דיווח על בעיה באתר</a>
+                <!--הפנייה לראש האתר-->
+            </li>
+        </ul>
+        <p>כל הזכויות שמורות - עדן בן אדרת 2020</p>
+    </footer>
+    <script src="script.js"></script>
+    <!--קריאה לקובץ גאווה סקריפט-->
+</body>
+
+</html>
